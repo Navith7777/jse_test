@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Location-Based Login</title>
-</head>
- <style>
+    <style>
         body {
             margin: 0;
             height: 100vh;
@@ -21,6 +22,7 @@
             width: 320px;
             box-shadow: 0 0 40px rgba(0, 173, 239, 0.6);
             text-align: center;
+            transition: width 0.3s, padding 0.3s;
         }
         .login-container img {
             width: 80px;
@@ -29,6 +31,7 @@
         .login-container h2 {
             color: #00adef;
             margin-bottom: 30px;
+            font-size: 20px;
         }
         .login-container input {
             width: 100%;
@@ -63,18 +66,37 @@
             margin-top: 15px;
             font-size: 14px;
         }
+
+        /* Responsive tweaks for small screens */
+        @media (max-width: 400px) {
+            .login-container {
+                width: 90%;
+                padding: 20px;
+            }
+            .login-container img {
+                width: 60px;
+            }
+            .login-container h2 {
+                font-size: 18px;
+            }
+            .login-container input, .login-container button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="login-container">
         <img src="logo_admin.png" alt="Logo" />
-        <h2>JSE ENGINEEERING PVT LTD</h2>
+        <h2>JSE ENGINEERING PVT LTD</h2>
         <form id="loginForm">
             <input type="text" id="username" placeholder="Username" required>
             <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Sign In</button>
             <a href="#" class="register-link">Not registered? Register</a>
         </form>
+    </div>
 
     <script src="location-login.js"></script>
 </body>
