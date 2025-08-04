@@ -1,114 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Location-Based Login</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            font-family: Arial, sans-serif;
-        }
-        .login-container {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 40px;
-            width: 320px;
-            box-shadow: 0 0 40px rgba(0, 173, 239, 0.6);
-            text-align: center;
-            transition: width 0.3s, padding 0.3s;
-        }
-        buttond.{
-              background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 40px;
-            width: 200px;
-            box-shadow: 0 0 40px rgba(0, 173, 239, 0.6);
-            text-align: center;
-            transition: width 0.3s, padding 0.3s;
-        }
-        }
-        .login-container img {
-            width: 80px;
-            margin-bottom: 15px;
-        }
-        .login-container h2 {
-            color: #00adef;
-            margin-bottom: 30px;
-            font-size: 20px;
-        }
-        .login-container input {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 8px;
-            outline: none;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            font-size: 16px;
-        }
-     .login-container button {
-    width: 60%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #00adef;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-        .login-container button:hover {
-            background: #008fc9;
-        }
-        .register-link {
-            color: #00adef;
-            text-decoration: none;
-            display: block;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        /* Responsive tweaks for small screens */
-        @media (max-width: 400px) {
-            .login-container {
-                width: 90%;
-                padding: 20px;
-            }
-            .login-container img {
-                width: 60px;
-            }
-            .login-container h2 {
-                font-size: 18px;
-            }
-            .login-container input, .login-container button {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Location-Based Login</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      font-family: Arial, sans-serif;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 40px;
+      width: 320px;
+      box-shadow: 0 0 40px rgba(0, 173, 239, 0.6);
+      text-align: center;
+      transition: width 0.3s, padding 0.3s;
+    }
+    .login-container img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+    .login-container h2 {
+      color: #00adef;
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 16px;
+    }
+    .login-container button {
+      width: 60%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #00adef;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    .login-container button:hover {
+      background: #008fc9;
+    }
+    .register-link {
+      color: #00adef;
+      text-decoration: none;
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      .login-container {
+        width: 90%;
+        padding: 20px;
+      }
+      .login-container img {
+        width: 60px;
+      }
+      .login-container h2 {
+        font-size: 18px;
+      }
+      .login-container input, .login-container button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="login-container">
-        <img src="logo_admin.png" alt="Logo" />
-        <h2>JSE ENGINEERING PVT LTD</h2>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button class="buttond" type="submit">Sign In</button>
-            <a href="#" class="register-link">Not registered? Register</a>
-        </form>
-    </div>
+  <div class="login-container">
+    <img src="logo_admin.png" alt="Logo" />
+    <h2>JSE ENGINEERING PVT LTD</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Sign In</button>
+      <a href="#" class="register-link">Not registered? Register</a>
+    </form>
+  </div>
 
-    <script src="location-login.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (username === "admin" && password === "admin") {
+        // Get user's GPS location
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+
+        function success(position) {
+          const userLat = position.coords.latitude;
+          const userLng = position.coords.longitude;
+
+          const officeLat = 13.100004; // your location from map
+          const officeLng = 80.166346;
+
+          const distance = getDistanceFromLatLonInMeters(userLat, userLng, officeLat, officeLng);
+
+          console.log(`User location: ${userLat},${userLng}`);
+          console.log(`Distance to office: ${distance.toFixed(2)} meters`);
+
+          if (distance <= 200) {
+            alert("✅ Login successful! You are inside the allowed area.");
+            window.location.href = "dashboard.html";
+          } else {
+            alert("❌ Login failed! You are outside the allowed area.\nDistance: " + Math.round(distance) + " meters.");
+          }
+        }
+
+        function error() {
+          alert("❌ Location access denied. Please enable location to login.");
+        }
+
+        function getDistanceFromLatLonInMeters(lat1, lon1, lat2, lon2) {
+          const R = 6371e3; // meters
+          const φ1 = lat1 * Math.PI/180;
+          const φ2 = lat2 * Math.PI/180;
+          const Δφ = (lat2-lat1) * Math.PI/180;
+          const Δλ = (lon2-lon1) * Math.PI/180;
+
+          const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+                    Math.cos(φ1) * Math.cos(φ2) *
+                    Math.sin(Δλ/2) * Math.sin(Δλ/2);
+          const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+          return R * c; // in meters
+        }
+      } else {
+        alert("❌ Invalid username or password.");
+      }
+    });
+  </script>
 </body>
 </html>
